@@ -93,7 +93,7 @@ const Hero = () => {
       <Container>
 
         <Left>
-          <Title>Learn. Apply. Innovate.</Title>
+          <Title> Learn. Apply. Innovate. </Title>
           <UnderTitle>
             <Line src="./img/line.png" />
             <Subtitle> What can I do? </Subtitle> 

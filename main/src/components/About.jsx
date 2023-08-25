@@ -76,15 +76,15 @@ const About = () => {
           
         </Left>
         <Right>
-        <Title>Learn. Apply. Innovate.</Title>
+        <Title>A developer who thinks outside the box.</Title>
           <UnderTitle>
             <Line src="./img/line.png" />
-            <Subtitle> What can I do? </Subtitle> 
+            <Subtitle> Technologies I work with: </Subtitle> 
           </UnderTitle>
           <Desc>
-            I enjoy creating delightful, human-centered digital experiences.
+          JavaScript, React, HTML, CSS, Python, SQL, just to name a few.
           </Desc>
-          <Button> Learn More </Button>
+          <Button> See more </Button>
         </Right>
       </Container>
     </Section>
