@@ -14,8 +14,9 @@ const Container = styled.div`
     padding: 10px 0px;
 `;
 
-const Name = styled.div`
+const Name = styled.h1`
     color: white;
+    font-size: 24px;
 `;
 
 const Links = styled.div`
@@ -61,7 +62,7 @@ const Navbar = () => {
         <Container>
             <Links>
                 <Name>
-                    OKAN
+                    OKAN GENC
                 </Name>
                 <List>
                     <ListItem>Home</ListItem>
