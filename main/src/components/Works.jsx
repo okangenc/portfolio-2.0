@@ -2,11 +2,10 @@ import React from "react";
 import styled from 'styled-components'
 
 const data = [
-  "Web Design",
-  "Development",
-  "Illustration",
-  "Product Design",
-  "Social Media",
+  "About",
+  "Education",
+  "Technologies",
+  "Projects",
 ];
 
 const Section = styled.div`
