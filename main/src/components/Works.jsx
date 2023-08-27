@@ -30,6 +30,7 @@ const Left = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
+  padding-left: 100px;
 `;
 
 const List = styled.ul`
@@ -47,7 +48,7 @@ const ListItem = styled.li`
   -webkit-text-stroke: 1px white;
   position: relative;
 
-  ::after {
+  &:after {
     content: "${(props) => props.text}";
     position: absolute;
     top: 0;
@@ -59,8 +60,9 @@ const ListItem = styled.li`
   }
 
   &:hover {
-    ::after {
-      animation: moveText 0.5s linear both;
+     &:after {
+      animation: moveText 0.7s linear both;
+      color: white;
 
       @keyframes moveText {
         to {
@@ -70,6 +72,8 @@ const ListItem = styled.li`
     }
   }
 `;
+
+
 
 const Right = styled.div`
   flex: 1;

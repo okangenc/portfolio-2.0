@@ -36,17 +36,39 @@ const Form = styled.form`
 
 const Input = styled.input`
   padding: 20px;
-  background-color: #e8e6e6;
-  border: none;
+  background-color: transparent;  /* Makes the background see-through */
+  border: 1px solid white;        /* White outline/border */
+  color: white;                   /* White text color */
   border-radius: 5px;
+  outline: none;                  /* Removes the default browser outline */
+  ::placeholder {                 /* Styles the placeholder text */
+    color: rgba(255, 255, 255, 0.7);
+  }
+  &:focus {
+    border-color: #ddd;             /* Lighter border color on focus */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Optional: Adds a subtle glow */
+  }
+
 `;
 
 const TextArea = styled.textarea`
   padding: 20px;
-  border: none;
+  background-color: transparent;  /* Makes the background see-through */
+  border: 1px solid white;        /* White outline/border */
+  color: white;                   /* White text color */
   border-radius: 5px;
-  background-color: #e8e6e6;
+  outline: none;                  /* Removes the default browser outline */
+  ::placeholder {                 /* Styles the placeholder text */
+    color: rgba(255, 255, 255, 0.7);
+  }
+  resize: vertical;               /* Allows vertical resizing only */
+  &:focus {
+    border-color: #ddd;             /* Lighter border color on focus */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Optional: Adds a subtle glow */
+  }
+
 `;
+
 
 const Button = styled.button`
   background-color: #da4ea2;
@@ -94,7 +116,7 @@ const Contact = () => {
       <Container>
         <Left>
           <Form ref={ref} onSubmit={handleSubmit}>
-            <Title> Let's Connect </Title>
+            <Title> Let's Connect ... </Title>
             <Input placeholder="Name" name="name" />
             <Input placeholder="Email" name="email" />
             <TextArea 
