@@ -17,6 +17,7 @@ const Container = styled.div`
 const Name = styled.h1`
     color: white;
     font-size: 24px;
+    padding-left: 20px;
 `;
 
 const Links = styled.div`
