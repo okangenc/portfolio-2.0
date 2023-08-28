@@ -28,6 +28,7 @@ const Left = styled.div`
   justify-content: center;
   gap: 20px;
   padding-left: 120px;
+  // background-color: white;
 `;
 
 const Title = styled.h1`

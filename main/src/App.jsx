@@ -4,6 +4,8 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Works from "./components/Works";
 
+
+/*
 const Container = styled.div`
   height: 100vh;
   scroll-snap-type: y mandatory;
@@ -31,7 +33,7 @@ function App() {
 
 export default App;
 
-/*
+*/
 
 const Container = styled.div`
     height: 100vh;
@@ -66,4 +68,4 @@ function App() {
   );
 }
 
-*/
+export default App;

@@ -13,7 +13,7 @@ const Section = styled.div`
   height: 100vh;
   scroll-snap-align: center;
   display: flex;
-  justify-content: center;
+  //justify-content: center;
   position: relative;
   color: black;
   font-size: 14px;
@@ -30,7 +30,7 @@ const Left = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
-  padding-left: 100px;
+  //padding-left: 100px;
 `;
 
 const List = styled.ul`

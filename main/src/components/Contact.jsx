@@ -130,7 +130,7 @@ const Contact = () => {
           </Form>
         </Left>
         <Right>
-          <Map />
+          
         </Right>
       </Container>
     </Section>

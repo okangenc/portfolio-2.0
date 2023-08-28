@@ -8,7 +8,9 @@ const Section = styled.div`
   height: 100vh;
   scroll-snap-align: center;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 `;
 
 const Container = styled.div`
@@ -20,35 +22,41 @@ const Container = styled.div`
 `;
 
 const Left = styled.div`
-  flex: 2;
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 20px;
+  //background-color: white;
 `;
 
 const Title = styled.h1`
   font-size: 74px;
-`; // Design. Implement. Evolve.
+  /* Other styling properties for Title */
+`;
 
 const UnderTitle = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
+  /* Other styling properties for UnderTitle */
 `;
 
 const Line = styled.img`
   height: 5px;
-`
+  /* Other styling properties for Line */
+`;
 
 const Subtitle = styled.h2`
   color: #da4ea2;
-`
+  /* Other styling properties for Subtitle */
+`;
 
 const Desc = styled.p`
   font-size: 24px;
   color: white;
   opacity: 70%;
+  /* Other styling properties for Desc */
 `;
 
 const Button = styled.button`
@@ -60,24 +68,25 @@ const Button = styled.button`
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  /* Other styling properties for Button */
 `;
 
 const Right = styled.div`
-  flex: 1;
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 20px;
-  padding-right: 100px;
+  /* Other styling properties for Right */
+  //background-color: pink;
+  // padding-left: 100px;
 `;
-
 
 const About = () => {
   return (
     <Section>
       <Container>
-
-      <Left>
+        <Left>
           <Canvas camera={{ position: [5, 5, 5], fov: 25 }}>
             <Suspense fallback={null}>
               <ambientLight intensity={0.5} />
@@ -87,19 +96,17 @@ const About = () => {
             </Suspense>
           </Canvas>
         </Left>
-
         <Right>
-        <Title>A developer who thinks outside the box.</Title>
+          <Title>A developer who thinks outside the box.</Title>
           <UnderTitle>
             <Line src="./img/line.png" />
             <Subtitle> Technologies I work with: </Subtitle> 
           </UnderTitle>
           <Desc>
-          JavaScript, React, HTML, CSS, Python, SQL, just to name a few.
+            JavaScript, React, HTML, CSS, Python, SQL, just to name a few.
           </Desc>
           <Button> See more </Button>
         </Right>
-
       </Container>
     </Section>
   );
