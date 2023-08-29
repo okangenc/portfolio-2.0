@@ -1,36 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from 'styled-components'
+import Technology from "./Technology";
 
 const data = [
   "Technology",
   "Design",
   "Programming",
   "Innovation",
-  "Creativity"
 ];
 
 const Section = styled.div`
   height: 100vh;
   scroll-snap-align: center;
   display: flex;
-  //justify-content: center;
-  position: relative;
-  color: black;
-  font-size: 14px;
-  font-weight: 300;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 `;
 
 const Container = styled.div`
+  height: 100vh;
+  scroll-snap-align: center;
   width: 1400px;
   display: flex;
   justify-content: space-between;
 `;
 
 const Left = styled.div`
-  flex: 1;
+  width: 50%;
   display: flex;
-  align-items: center;
-  //padding-left: 100px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding-left: 120px;
+  // background-color: black;
 `;
 
 const List = styled.ul`
@@ -81,14 +84,15 @@ const Right = styled.div`
 
 
 const Works = () => {
+  const [work, setWork] = useState("Technology");
   return (
     <Section>
       <Container>
 
         <Left>
           <List>
-            {data.map((item) => (
-              <ListItem key={item} text={item}>
+          {data.map((item) => (
+              <ListItem key={item} text={item} onClick={() => setWork(item)}>
                 {item}
               </ListItem>
             ))}
@@ -96,7 +100,9 @@ const Works = () => {
         </Left>
 
         <Right>
-          
+          {work === "Technology" ? (
+            <Technology />
+          ) : null}
         </Right>
 
       </Container>

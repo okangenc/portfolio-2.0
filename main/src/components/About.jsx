@@ -27,7 +27,7 @@ const Left = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 20px;
-  //background-color: white;
+  // background-color: white;
 `;
 
 const Title = styled.h1`
