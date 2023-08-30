@@ -7,6 +7,7 @@ const data = [
   "Design",
   "Programming",
   "Innovation",
+  "Clear"
 ];
 
 const Section = styled.div`
@@ -24,6 +25,11 @@ const Container = styled.div`
   width: 1400px;
   display: flex;
   justify-content: space-between;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    flex-direction: column;
+  }
 `;
 
 const Left = styled.div`
@@ -34,6 +40,11 @@ const Left = styled.div`
   gap: 20px;
   padding-left: 120px;
   // background-color: black;
+
+  @media only screen and (max-width: 768px) {
+    padding: 20px;
+    justify-content: center;
+  }
 `;
 
 const List = styled.ul`
@@ -50,6 +61,12 @@ const ListItem = styled.li`
   color: transparent;
   -webkit-text-stroke: 1px white;
   position: relative;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 24px;
+    color: white;
+    -webkit-text-stroke: 0px;
+  }
 
   &:after {
     content: "${(props) => props.text}";

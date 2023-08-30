@@ -8,9 +8,7 @@ const Section = styled.div`
   height: 100vh;
   scroll-snap-align: center;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 `;
 
 const Container = styled.div`
@@ -22,24 +20,25 @@ const Container = styled.div`
 `;
 
 const Left = styled.div`
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20px;
-  // background-color: white;
+  flex: 1;
+
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const Title = styled.h1`
   font-size: 74px;
-  /* Other styling properties for Title */
+
+  @media only screen and (max-width: 768px) {
+    font-size: 60px;
+  }
 `;
 
 const UnderTitle = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
-  /* Other styling properties for UnderTitle */
 `;
 
 const Line = styled.img`
@@ -72,14 +71,16 @@ const Button = styled.button`
 `;
 
 const Right = styled.div`
-  width: 50%;
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 20px;
-  /* Other styling properties for Right */
-  //background-color: pink;
-  // padding-left: 100px;
+
+  @media only screen and (max-width: 768px) {
+    align-items: center;
+    text-align: center;
+  }
 `;
 
 const About = () => {
