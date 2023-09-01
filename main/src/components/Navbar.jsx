@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styled from 'styled-components';
+import { aboutRef } from './About';
 
 const Section = styled.div`
   display: flex;
@@ -26,8 +27,6 @@ const Container = styled.div`
 const Name = styled.h1`
   color: white;
   font-size: 24px;
-  /* Glow Effect */
-  // text-shadow: 0 0 30px rgba(255, 255, 255, 0.7);
 `;
 
 const Links = styled.div`
@@ -54,10 +53,10 @@ const List = styled.ul`
 
 const ListItem = styled.li`
   cursor: pointer;
-  transition: all 0.3s ease; /* Smooth transition effect */
+  transition: all 0.3s ease;
 
   &:hover {
-    transform: scale(1.1); /* Grow by 10% */
+    transform: scale(1.1);
   }
 `;
 
@@ -65,11 +64,10 @@ const Icon = styled.img`
   width: 30px;
   height: 30px;
   cursor: pointer;
-  transition: all 0.3s ease; /* Smooth transition effect */
+  transition: all 0.3s ease;
 
   &:hover {
-    transform: scale(1.1); /* Grow by 10% */
-    opacity: 1; /* Increase opacity to 100% */
+    opacity: 1;
   }
 `;
 
@@ -81,19 +79,25 @@ const CircleIconWrapper = styled.a`
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  opacity: 0.8; /* Initial opacity */
-  text-decoration: none; /* Remove default underline for links */
+  opacity: 0.6;
+  text-decoration: none;
 
-  transition: all 0.3s ease; /* Smooth transition effect */
+  transition: all 0.3s ease;
 
   &:hover {
-    //width: 45px; /* Grow by 5px */
-    //height: 45px; /* Grow by 5px */
-    opacity: 1; /* Increase opacity to 100% */
+    opacity: 1;
   }
 `;
 
+
 const Navbar = () => {
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <Section>
       <Container>
@@ -101,7 +105,7 @@ const Navbar = () => {
           <Name>OKAN GENÇ</Name>
           <List>
             <ListItem>Home</ListItem>
-            <ListItem>About</ListItem>
+            <ListItem onClick={() => scrollToSection('about')}>About</ListItem>
             <ListItem>Work</ListItem>
             <ListItem>Contact</ListItem>
           </List>
@@ -120,4 +124,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-

@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useRef } from "react";
 import styled from "styled-components";
 import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
@@ -93,8 +93,10 @@ const Right = styled.div`
 `;
 
 const About = () => {
+  
+
   return (
-    <Section>
+    <Section id="about">
       <Container>
         <Left>
           <Canvas camera={{ position: [5, 5, 5], fov: 25 }}>
@@ -121,5 +123,6 @@ const About = () => {
     </Section>
   );
 };
+
 
 export default About;
