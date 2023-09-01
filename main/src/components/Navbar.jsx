@@ -26,6 +26,7 @@ const Container = styled.div`
 const Name = styled.h1`
     color: white;
     font-size: 24px;
+
 `;
 
 const Links = styled.div`
@@ -55,18 +56,20 @@ const ListItem = styled.li`
 `;
 
 const Icon = styled.img`
-    width: 20px;
+    width: 26px;
+    height: 26px;
     cursor: pointer;
 `;
 
-const Button = styled.button`
-    width: 100px;
-    padding: 10px;
-    background-color: #da4ea2;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+const CircleIconWrapper = styled.div`
+  width: 40px; /* Adjust the size of the white circle */
+  height: 40px; /* Adjust the size of the white circle */
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%; /* Makes it a circle */
+  opacity: 70%;
 `;
 
 const Navbar = () => {
@@ -85,10 +88,12 @@ const Navbar = () => {
                 </List>
             </Links>
             <Icons>
-                <Icon src="./img/search.png" />
-                <Button>
-                    Hire Now
-                </Button>
+                <CircleIconWrapper>
+                    <Icon src="./img/github.png" />
+                </CircleIconWrapper>
+                <CircleIconWrapper>
+                    <Icon src="./img/linkedin.png" />
+                </CircleIconWrapper>
             </Icons>
         </Container>
     </Section>
