@@ -1,6 +1,5 @@
 import React, { useRef } from 'react';
 import styled from 'styled-components';
-import { aboutRef } from './About';
 
 const Section = styled.div`
   display: flex;
@@ -71,6 +70,17 @@ const Icon = styled.img`
   }
 `;
 
+const CoinLiveIcon = styled.img`
+  width: 65px;
+  height: 35px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    opacity: 1;
+  }
+`;
+
 const CircleIconWrapper = styled.a`
   width: 40px;
   height: 40px;
@@ -104,10 +114,10 @@ const Navbar = () => {
         <Links>
           <Name>OKAN GENÇ</Name>
           <List>
-            <ListItem>Home</ListItem>
+            <ListItem onClick={() => scrollToSection('home')}>Home</ListItem>
             <ListItem onClick={() => scrollToSection('about')}>About</ListItem>
-            <ListItem>Work</ListItem>
-            <ListItem>Contact</ListItem>
+            <ListItem onClick={() => scrollToSection('work')}>Work</ListItem>
+            <ListItem onClick={() => scrollToSection('contact')}>Contact</ListItem>
           </List>
         </Links>
         <Icons>
@@ -116,6 +126,9 @@ const Navbar = () => {
           </CircleIconWrapper>
           <CircleIconWrapper href="https://www.linkedin.com/in/okan-gen%C3%A7-0638671b5/" target="_blank">
             <Icon src="./img/linkedin.png" />
+          </CircleIconWrapper>
+          <CircleIconWrapper href="https://stellar-zuccutto-e09135.netlify.app/" target="_blank">
+            <CoinLiveIcon src="./img/coinlivelogo2.png" />
           </CircleIconWrapper>
         </Icons>
       </Container>

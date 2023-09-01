@@ -101,9 +101,9 @@ const Right = styled.div`
 
 
 const Works = () => {
-  const [work, setWork] = useState("Technology");
+  const [work, setWork] = useState("Clear");
   return (
-    <Section>
+    <Section id="work">
       <Container>
 
         <Left>

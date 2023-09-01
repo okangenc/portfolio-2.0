@@ -132,7 +132,7 @@ const Contact = () => {
 
   return (
     <Section>
-      <Container>
+      <Container id="contact">
         <Left>
           <Form ref={ref} onSubmit={handleSubmit}>
             <Title> Let's Connect. </Title>
