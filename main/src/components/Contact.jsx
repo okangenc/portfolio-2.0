@@ -86,6 +86,13 @@ const Button = styled.button`
   cursor: pointer;
   border-radius: 5px;
   padding: 20px;
+  opacity: 0.7; /* Initial opacity */
+  transition: all 0.3s ease; /* Smooth transition effect */
+
+  &:hover {
+    opacity: 1; /* Increase opacity to 100% */
+    transform: scale(1.02); /* Grow by 10% */
+  }
 `;
 
 const Right = styled.div`

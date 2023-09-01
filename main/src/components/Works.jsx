@@ -81,7 +81,7 @@ const ListItem = styled.li`
 
   &:hover {
      &:after {
-      animation: moveText 0.7s linear both;
+      animation: moveText 1s linear both;
       color: white;
 
       @keyframes moveText {

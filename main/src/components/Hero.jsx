@@ -53,7 +53,11 @@ const Title = styled.h1`
   @media only screen and (max-width: 768px) {
     text-align: center;
   }
-`; // Design. Implement. Evolve.
+
+  /* Glow Effect */
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+`;
+
 
 const UnderTitle = styled.div`
   display: flex;
@@ -89,7 +93,15 @@ const Button = styled.button`
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  opacity: 0.7; /* Initial opacity */
+  transition: all 0.3s ease; /* Smooth transition effect */
+
+  &:hover {
+    opacity: 1; /* Increase opacity to 100% */
+    transform: scale(1.02); /* Grow by 10% */
+  }
 `;
+
 
 const Right = styled.div`
   flex: 3;

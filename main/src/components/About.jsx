@@ -30,6 +30,9 @@ const Left = styled.div`
 const Title = styled.h1`
   font-size: 74px;
 
+  /* Glow Effect */
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+
   @media only screen and (max-width: 768px) {
     font-size: 60px;
   }
@@ -67,7 +70,13 @@ const Button = styled.button`
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  /* Other styling properties for Button */
+  opacity: 0.7; /* Initial opacity */
+  transition: all 0.3s ease; /* Smooth transition effect */
+
+  &:hover {
+    opacity: 1; /* Increase opacity to 100% */
+    transform: scale(1.02); /* Grow by 10% */
+  }
 `;
 
 const Right = styled.div`
