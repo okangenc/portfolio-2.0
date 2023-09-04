@@ -6,7 +6,6 @@ const data = [
   "Technology",
   "Design",
   "Programming",
-  "Innovation",
   "Clear"
 ];
 
